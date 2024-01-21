@@ -1,14 +1,15 @@
-from distanceutil import xDistanceBetweenLandmarks, yDistanceBetweenLandmarks
+from distance_util import xDistanceBetweenLandmarks, yDistanceBetweenLandmarks
 
 commandFrameCount = 5
 registerDistance = 200
 
-def detectCommand(landmarksQueue):
+
+def detectAction(landmarksQueue):
     if len(landmarksQueue) < commandFrameCount:
-        return 'No Hand'
+        return 'Not enough frames'
 
     if not landmarksQueue[-commandFrameCount] or not landmarksQueue[-1]:
-        return 'Idle'
+        return 'No Hand'
 
     if xDistanceBetweenLandmarks(landmarksQueue[-1][1], landmarksQueue[-commandFrameCount][1]) >= registerDistance:
         return 'Left Swipe'

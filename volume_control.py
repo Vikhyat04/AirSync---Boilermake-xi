@@ -1,6 +1,7 @@
 import subprocess
 import re
 
+
 def getSpeakerOutputVolume():
     cmd = "osascript -e 'get volume settings'"
     process = subprocess.run(cmd, stdout=subprocess.PIPE, shell=True)
@@ -11,6 +12,7 @@ def getSpeakerOutputVolume():
     volume = int(volume)
     muted = (muted == 'true')
     return 0 if muted else volume
+
 
 def setVolume(newVolume):
     if newVolume < 0:
