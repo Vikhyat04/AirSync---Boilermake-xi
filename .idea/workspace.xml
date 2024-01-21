@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96ccae74-0132-412b-958e-678eb61a9115" name="Changes" comment="Implemented Volume adjustment and basic Gesture classification">
-      <change afterPath="$PROJECT_DIR$/command_setter.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/constants.py" afterDir="false" />
+    <list default="true" id="96ccae74-0132-412b-958e-678eb61a9115" name="Changes" comment="Added Speech Recognition">
+      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actionsetter.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camera.py" beforeDir="false" afterPath="$PROJECT_DIR$/camera.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commanddetector.py" beforeDir="false" afterPath="$PROJECT_DIR$/action_detector.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distanceutil.py" beforeDir="false" afterPath="$PROJECT_DIR$/distance_util.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handdetector.py" beforeDir="false" afterPath="$PROJECT_DIR$/hand_detector.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/volumecontrol.py" beforeDir="false" afterPath="$PROJECT_DIR$/volume_control.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/command_setter.py" beforeDir="false" afterPath="$PROJECT_DIR$/command_setter.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,8 +97,32 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="boilermakexi" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.test" />
         <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
@@ -136,7 +153,9 @@
       <workItem from="1705809648870" duration="394000" />
       <workItem from="1705810047198" duration="195000" />
       <workItem from="1705810246422" duration="354000" />
-      <workItem from="1705810608215" duration="1161000" />
+      <workItem from="1705810608215" duration="4167000" />
+      <workItem from="1705815768213" duration="448000" />
+      <workItem from="1705817497384" duration="1551000" />
     </task>
     <task id="LOCAL-00001" summary="Implemented Volume adjustment and basic Gesture classification">
       <option name="closed" value="true" />
@@ -146,7 +165,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705804473041</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added Speech Recognition">
+      <option name="closed" value="true" />
+      <created>1705811785278</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1705811785278</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,10 +192,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Implemented Volume adjustment and basic Gesture classification" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented Volume adjustment and basic Gesture classification" />
+    <MESSAGE value="Added Speech Recognition" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Speech Recognition" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/boilermakexi$test.coverage" NAME="test Coverage Results" MODIFIED="1705789163845" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/boilermakexi$test.coverage" NAME="test Coverage Results" MODIFIED="1705812362682" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/boilermakexi$main.coverage" NAME="main Coverage Results" MODIFIED="1705806935391" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/boilermakexi$camera.coverage" NAME="camera Coverage Results" MODIFIED="1705785968986" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>

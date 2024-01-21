@@ -19,7 +19,7 @@ def startSpeechRecognition(command):
 
             print(text)
 
-            if "adjust sound" in text.lower():
+            if "volume" in text.lower():
                 setCommand(command, commands['Volume'])
             if "stop" in text.lower():
                 setCommand(command, commands['Idle'])
@@ -35,19 +35,8 @@ def capture_voice_input(recognizer):
 def convert_voice_to_text(audio, recognizer):
     try:
         text = recognizer.recognize_google(audio)
-    except sr.UnknownValueError:
+    except sr.UnknownValueError as e:
         text = ""
-    except sr.RequestError:
+    except sr.RequestError as e:
         text = ""
     return text
-
-# def getAction(oldAction):
-#     action = oldAction
-#
-#     if keyboard.is_pressed('Space'):
-#         action = 'Volume'
-#
-#     if keyboard.is_pressed('Enter'):
-#         action = 'Idle'
-#
-#     return action
