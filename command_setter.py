@@ -1,4 +1,5 @@
 import speech_recognition as sr
+import sys
 
 from constants import commands
 
@@ -23,6 +24,10 @@ def startSpeechRecognition(command):
                 setCommand(command, commands['Volume'])
             if "stop" in text.lower():
                 setCommand(command, commands['Idle'])
+            if "terminate" in text.lower():
+                sys.exit()
+        except SystemExit as e:
+            sys.exit()
         except:
             pass
 

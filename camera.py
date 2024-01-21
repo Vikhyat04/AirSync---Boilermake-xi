@@ -7,7 +7,11 @@ from action_detector import detectAction
 
 from distance_util import distanceBetweenLandmarks, setCamSize
 
-from constants import commands
+from constants import commands, actions
+
+from extension_server import send_message
+
+import asyncio
 
 def getCommand(command):
     try:
@@ -19,7 +23,7 @@ def getCommand(command):
         value = ""
     return value
 
-def startHandDetection(command):
+async def startHandDetectionHelper(command, extensionClient):
     camWidth = 800
     camHeight = 500
     setCamSize(camWidth, camHeight)
@@ -38,6 +42,7 @@ def startHandDetection(command):
     volume = 100
 
     commandVal = getCommand(command)
+    action = None
 
     while True:
         success, image = capture.read()
@@ -52,7 +57,12 @@ def startHandDetection(command):
         except:
             landmarksQueue.append(None)
 
-        detectAction(landmarksQueue)
+        newAction = detectAction(landmarksQueue)
+
+        if newAction != actions['Idle'] and newAction != action:
+            await send_message(newAction, extensionClient)
+
+        action = newAction
 
         newCommandVal = getCommand(command)
 
@@ -69,3 +79,7 @@ def startHandDetection(command):
 
         cv2.imshow('img', image)
         cv2.waitKey(waitKey)
+
+
+def startHandDetection(command, extensionClient):
+    asyncio.run(startHandDetectionHelper(command, extensionClient))
