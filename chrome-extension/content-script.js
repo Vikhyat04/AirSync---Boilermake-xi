@@ -4,10 +4,19 @@ webSocket.onopen = function() {
     console.log('Connection opened');
 
     webSocket.onmessage = function(message) {
-        console.log(message.data);
-        if (message.data == "boba3") {
-            console.log("we are scrolling");
-            window.scrollBy(0, 100)
+        let { data } = message;
+        console.log(data)
+        if (data == "1") {
+            history.back()
+        }
+        else if (data == "2") {
+            history.forward()
+        }
+        else if (data == "4") {
+            window.scrollBy({top: 400, behavior: "smooth"})
+        }
+        else if (data == "3") {
+            window.scrollBy({top: -400, behavior: "smooth"})
         }
     }
 }

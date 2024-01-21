@@ -41,7 +41,10 @@ capture.set(cv2.CAP_PROP_FRAME_WIDTH, camWidth)
 capture.set(cv2.CAP_PROP_FRAME_HEIGHT, camHeight)
 
 async def send_message(message, client):
-    await client.send(message)
+    try:
+        await client.send(message)
+    except:
+        pass
 
 async def new_client_connected(client_socket, path):
     print("New client connected!")
@@ -72,6 +75,9 @@ async def startHandDetection(client_socket):
             await send_message(str(newAction), client_socket)
 
         action = newAction
+
+        if action == actions['Left Swipe'] or action == actions['Right Swipe']:
+            return
 
         newCommandVal = getCommand()
 

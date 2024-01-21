@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96ccae74-0132-412b-958e-678eb61a9115" name="Changes" comment="Worked on connecting with chrome extension">
+    <list default="true" id="96ccae74-0132-412b-958e-678eb61a9115" name="Changes" comment="Fixed camera-extension connection">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chrome-extension/content-script.js" beforeDir="false" afterPath="$PROJECT_DIR$/chrome-extension/content-script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/extension_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/extension_server.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -127,8 +128,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.test" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.test" />
       </list>
     </recent_temporary>
   </component>
@@ -164,7 +165,9 @@
       <workItem from="1705829763913" duration="555000" />
       <workItem from="1705830325237" duration="337000" />
       <workItem from="1705830665234" duration="157000" />
-      <workItem from="1705830825484" duration="9629000" />
+      <workItem from="1705830825484" duration="11473000" />
+      <workItem from="1705842564957" duration="243000" />
+      <workItem from="1705842811179" duration="534000" />
     </task>
     <task id="LOCAL-00001" summary="Implemented Volume adjustment and basic Gesture classification">
       <option name="closed" value="true" />
@@ -198,7 +201,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705838310429</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Fixed camera-extension connection">
+      <option name="closed" value="true" />
+      <created>1705840732676</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1705840732676</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,11 +231,12 @@
     <MESSAGE value="Added Speech Recognition" />
     <MESSAGE value="Changed Adjusted Sound to Volume command" />
     <MESSAGE value="Worked on connecting with chrome extension" />
-    <option name="LAST_COMMIT_MESSAGE" value="Worked on connecting with chrome extension" />
+    <MESSAGE value="Fixed camera-extension connection" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed camera-extension connection" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/boilermakexi$test.coverage" NAME="test Coverage Results" MODIFIED="1705812362682" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/boilermakexi$main.coverage" NAME="main Coverage Results" MODIFIED="1705806935391" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/boilermakexi$main.coverage" NAME="main Coverage Results" MODIFIED="1705842813809" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/boilermakexi$camera.coverage" NAME="camera Coverage Results" MODIFIED="1705785968986" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
